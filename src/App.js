@@ -1,9 +1,14 @@
 import React from 'react'
+import './App.css'
 
 const App = () => {
-  const messege = 'Hellow World'
+  
   return(
-    <h1>{messege}</h1>
+    
+    <div className='container'>
+
+    </div>
+    
   )
 }
 
