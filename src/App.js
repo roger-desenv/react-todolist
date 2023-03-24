@@ -1,14 +1,30 @@
 import React from 'react'
-import './App.css'
 import { useState } from 'react'
 
+import Tasks from "./components/Tasks"
+import './App.css'
+
+
 const App = () => {
-  const [message, setMessage] = useState('Hello World')
-  
+  const [tasks, setTasks] = useState([
+    {
+      id: "1",
+      title: "Estudar Programação",
+      completed: false,
+    },
+    {
+      id: "2",
+      title: "Ler Livros",
+      completed: true,
+    },
+  ])
+
   return(
     <>
-      <div className='container'>{message}</div>
-      <button onClick={() => setMessage ("Hellooowww Wooorld!")}>Mudar Mensagem</button>
+      <div className='container'>
+        <Tasks tasks={tasks}/>
+      </div>
+      
     </>
     
   )
